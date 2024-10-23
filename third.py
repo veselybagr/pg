@@ -13,6 +13,7 @@ def vrat_prvocisla(maximum):
         if je_prvocislo(num):
             prvocisla.append(num)
     return prvocisla
+    
 
 
 print(je_prvocislo(1))
@@ -25,4 +26,9 @@ print(vrat_prvocisla(1))
 print(vrat_prvocisla(2))
 print(vrat_prvocisla(3))
 print(vrat_prvocisla(10))
+
+if __name__ == "__main__":
+    cislo = int(input("Zadej maximum: "))
+    provocisla = vrat_prvocisla(cislo)
+    print(prvocisla)
 
