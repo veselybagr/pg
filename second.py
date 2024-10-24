@@ -1,4 +1,5 @@
 def cislo_text(cislo):
+    cislo = int(cislo)
 
     maly_cisla = ["nula", "jedna", "dva", "tři", "čtyři", "pět", "šest","sedm", "osm", "devět"]
     vetsi_cisla = ["deset", "jedenáct", "dvanáct", "třináct", "čtrnáct", "patnáct", "šestnáct", "sedmnáct", "osmnáct", "devatenáct"]
