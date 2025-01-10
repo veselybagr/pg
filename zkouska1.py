@@ -27,23 +27,23 @@ def process_strings(strings):
 
 def test_process_strings():    
     result = process_strings(["abc", "abcd", "STOP", "efgh"])
-    print(f"Výsledek testu 1: {result}")  # Vypíše výsledek testu
-    print(f"Očekávaný výsledek 1: ['ABCD']")  # Očekávaný výsledek
+    print(f"Výsledek testu 1: {result}") 
+    print(f"Očekávaný výsledek 1: ['ABCD']") 
     print("---------------")
 
     result = process_strings(["hello", "world", "STOP", "python"])
-    print(f"Výsledek testu 2: {result}")  # Vypíše výsledek testu
-    print(f"Očekávaný výsledek 2: ['HELLO', 'WORLD']")  # Očekávaný výsledek
+    print(f"Výsledek testu 2: {result}") 
+    print(f"Očekávaný výsledek 2: ['HELLO', 'WORLD']") 
     print("---------------")
 
     result = process_strings(["hi", "ok", "go"])
-    print(f"Výsledek testu 3: {result}")  # Vypíše výsledek testu
-    print(f"Očekávaný výsledek 3: []")  # Očekávaný výsledek
+    print(f"Výsledek testu 3: {result}")  
+    print(f"Očekávaný výsledek 3: []") 
     print("---------------")
 
     result = process_strings(["code", "test", "debug"])
-    print(f"Výsledek testu 4: {result}")  # Vypíše výsledek testu
-    print(f"Očekávaný výsledek 4: ['CODE', 'TEST', 'DEBUG']")  # Očekávaný výsledek
+    print(f"Výsledek testu 4: {result}") 
+    print(f"Očekávaný výsledek 4: ['CODE', 'TEST', 'DEBUG']")  
     print("---------------")
 
 # Spuštění testů
