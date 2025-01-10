@@ -17,13 +17,13 @@ import math # importoval jsem knihovnu math
 class Shape:
     """Základní třída pro geometrické tvary"""
     def area(self):
-        raise NotImplementedError("Metoda area() musí být implementována v potomcích.") # metoda 'area' musí být implementována v podtřídách.
+        raise NotImplementedError("Metoda area() musí být implementována v potomcích.") 
 
 class Rectangle(Shape): # Rectangle zdědí všechny metody a vlastnosti třídy Shape
     """Třída pro obdélník, dědí od Shape"""
     def __init__(self, width, height): #konstruktor odkazujici na aktualni instanci a definuji mu rozmery
-        self.width = width # nastavení šířky obdélníku
-        self.height = height # nastavení výšky obdélníku
+        self.width = width 
+        self.height = height 
 
     def area(self):
         """Výpočet plochy obdélníku"""
@@ -32,7 +32,7 @@ class Rectangle(Shape): # Rectangle zdědí všechny metody a vlastnosti třídy
 class Circle(Shape): # třída Circle dědí metody a vlastnosti třídy Shape.
     """Třída pro kruh, dědí od Shape"""
     def __init__(self, radius):
-        self.radius = radius # Nastavení poloměru kruhu
+        self.radius = radius 
 
     def area(self):
         """Výpočet plochy kruhu (π * r^2)"""
@@ -48,18 +48,18 @@ def test_shapes():
     # Test pro obdélník
     rect = Rectangle(4, 5)
     area_rect = rect.area()
-    print(f"Obdélník: {area_rect}")  # Výpis plochy obdélníku
+    print(f"Obdélník: {area_rect}") 
     assert area_rect == 20
 
     # Test pro kruh
     circle = Circle(3)
     area_circle = round(circle.area(), 1)
-    print(f"Kruh: {area_circle}")  # Výpis plochy kruhu
+    print(f"Kruh: {area_circle}")  
     assert area_circle == 28.3
 
     # Test pro abstraktní třídu Shape
     try:
-        shape = Shape()  # Pokus o vytvoření instance abstraktní třídy
+        shape = Shape()  
     except TypeError:
         print("Nelze vytvořit instanci abstraktní třídy 'Shape'.")
         pass
