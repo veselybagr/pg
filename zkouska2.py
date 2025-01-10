@@ -28,10 +28,6 @@ def convert_to_czk(amount, currency):
         if len(parts) < 5:  # Pokud řádek nemá dostatek sloupců, přeskočíme ho pomocí continue
             continue
         _, _, mnozstvi, kod, kurz = parts  # Získáme potřebné hodnoty
-
-        # Převedeme hodnoty na čísla:
-        # - `kurz.replace(",", ".")` změní desetinnou čárku na tečku (abychom mohli převést na float)
-        # - `float(kurz.replace(",", ".")) / float(mnozstvi)` vypočítá kurz pro jednotku dané měny
         rates[kod] = float(kurz.replace(",", ".")) / float(mnozstvi)
 
     # Ověříme, zda zadaná měna existuje v načtených datech
@@ -40,7 +36,7 @@ def convert_to_czk(amount, currency):
 
     # Převod částky na české koruny (CZK)
     czk_amount = amount * rates[currency]
-    return round(czk_amount, 2)  # Zaokrouhlení výsledku na 2 desetinná místa
+    return round(czk_amount, 2)  #
 
 
 # Pytest testy pro Příklad 3
@@ -58,22 +54,21 @@ Velká Británie|libra|1|GBP|29,745
 
         # Příklad 1: Převod 100 USD na CZK
         result = convert_to_czk(100, "USD")
-        print(f"Převod 100 USD na CZK: {result} CZK")  # Výpis výsledku převodu
+        print(f"Převod 100 USD na CZK: {result} CZK")  
 
         # Příklad 2: Převod 50 EUR na CZK
         result = convert_to_czk(50, "EUR")
-        print(f"Převod 50 EUR na CZK: {result} CZK")  # Výpis výsledku převodu
+        print(f"Převod 50 EUR na CZK: {result} CZK") 
 
         # Příklad 3: Převod 200 AUD na CZK
         result = convert_to_czk(200, "AUD")
-        print(f"Převod 200 AUD na CZK: {result} CZK")  # Výpis výsledku převodu
+        print(f"Převod 200 AUD na CZK: {result} CZK")  
 
         # Příklad 4: Ošetření chybného kódu měny (např. XYZ)
         try:
             result = convert_to_czk(100, "XYZ")
         except ValueError as e:
-            print(f"Chyba: {e}")  # Výpis chybové hlášky, pokud měna není v seznamu
-
+            print(f"Chyba: {e}")  
 # Spuštění testů
 test_convert_to_czk()
 
